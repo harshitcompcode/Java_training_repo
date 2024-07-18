@@ -1,0 +1,4 @@
+Thi* i* a *ample paragraph.
+It ha* multiple line* and word*.
+I am Har*hit and I work in GrayMatter .
+Thi* will replace all the * with *.

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+  <!--  ean name = "cust" class = "com.graymatter.beans.Customer" autowire ="constructor">
+    
+    	<constructor-arg name = "name" value = "Harshit"></constructor-arg>
+    	<constructor-arg name = "id" value = "1714"></constructor-arg>
+    	<constructor-arg name = "mobile" value = "9508541023"></constructor-arg>
+    	<constructor-arg name = "order" ref = "ord"></constructor-arg>	
+    
+    </bean>-->
+    <bean name = "cust" class = "com.graymatter.beans.Customer" autowire = "constructor">
+    	<property name = "name" value = "vikky"></property>
+    	<property name = "id" value = "345"></property>
+    	<property name = "mobile" value = "9508541023"></property>
+    </bean>
+    
+    
+    
+    
+    
+   <!-- when doing autowiring through constructors and bean class not aving constructors , then spring container will perform constructor injection through default constructor
+   then uses setters to inject value -->
+    
+    <bean name = "ord" class = "com.graymatter.beans.Order">
+    <constructor-arg name = "orderId" value = "23"></constructor-arg>
+    <constructor-arg name = "itemList">
+    	<list>
+    		<value>item1</value>
+    		<value>item2</value>
+    		<value>item3</value>
+    		<value>item4</value>	
+    	</list>
+    </constructor-arg>
+    
+    
+    
+    
+    
+    
+    </bean>
+
+</beans>
